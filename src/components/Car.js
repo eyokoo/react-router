@@ -14,18 +14,15 @@ const Car = (props) => {
     })
     console.log(thisCar)
     return (
-
-        cars.map((car) => (
-
+        <Container>
             <Paper>
                 <h1>{thisCar.Name}</h1>
-                <Chip label={car["Miles_per_Gallon"]} />
-                <Chip label={car["Cylinders"]} />
-                <Chip label={car["Displacement"]} />
-                <Chip label={car["Horsepower"]} />
+                <Chip label={thisCar["Miles_per_Gallon"]} />
+                <Chip label={thisCar["Cylinders"]} />
+                <Chip label={thisCar["Displacement"]} />
+                <Chip label={thisCar["Horsepower"]} />
             </Paper>
-
-        ))
+        </Container>
 
     )
 }
