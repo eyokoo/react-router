@@ -17,10 +17,15 @@ const Car = (props) => {
         <Container>
             <Paper>
                 <h1>{thisCar.Name}</h1>
-                <Chip label={thisCar["Miles_per_Gallon"]} />
+                {
+                    Object.keys(thisCar).map((key,indx) => {
+                        return<Chip key={indx} label={`${key}: ${thisCar[key]}`}/>
+                    })
+                }
+                {/* <Chip label={`MPG: ${thisCar["Miles_per_Gallon"]}`}/>
                 <Chip label={thisCar["Cylinders"]} />
                 <Chip label={thisCar["Displacement"]} />
-                <Chip label={thisCar["Horsepower"]} />
+                <Chip label={thisCar["Horsepower"]} /> */}
             </Paper>
         </Container>
 
